@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Premier League</title>
+        <link rel="stylesheet" href="/public/css/style.css">
+    </head>
+    <body>
+        <div class="Loginbox">
+            <img src="/public/images/avatar.png" class="avatar">
+            <h1>Login</h1>
+            <% if(messages.error){ %>
+                <%=messages.error %>
+                <% } %>
+            <form action="/login" method="post">
+            <p>Email</p>
+                <input type="email" id="email" name="email" placeholder="Enter email" required>
+                <p>Password</p>
+                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                <input type="submit" value=Login> <br>
+                <a href="#">Forgot password?</a><br>
+                <a href="#">Change password?</a>
+                
+            </form>
+            
+            <div class="Registerbox">
+    
+                <form action="/register">
+                    <input type="submit" value=Register> <br>
+                </form>
+            </div>
+        
+        </div>
+        
+    </body>
+
+</html>

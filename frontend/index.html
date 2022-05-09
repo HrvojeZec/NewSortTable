@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sort</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col">
+            <div class="card card-body">
+                <input type="text" id="search-input" class="form-control"placeholder="Search for club..">
+            </div>
+         
+        </div>
+    </div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" data-column="position" data-order="asc">Position <span><i class="bi-arrow-up"></i></span></th>
+                <th scope="col" data-column="name" data-order="desc">Clubs <span></span></th>
+                <th scope="col" data-column="played" data-order="desc"><abbr title="Played">P</abbr> <span></span></th>
+                <th scope="col" data-column="won" data-order="desc"><abbr title="Won">W</abbr> <span></span></th>
+                <th scope="col" data-column="drawn" data-order="desc"><abbr title="Drawn">D</abbr> <span></span></th>
+                <th scope="col" data-column="lose" data-order="desc"><abbr title="lose">L</abbr> <span></span></th>
+                <th scope="col" data-column="gd" data-order="desc" ><abbr title="Goal difference">GD</abbr> <span></span></th>
+                <th scope="col" data-column="points" data-order="desc">Points <span></span></th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+
+        </tbody>
+    </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

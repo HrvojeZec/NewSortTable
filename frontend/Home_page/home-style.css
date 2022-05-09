@@ -1,0 +1,224 @@
+body{
+    
+    min-height: 100%;
+    background-image: url(../Home_page/images/20fce1c1-4fc1-407b-95d3-abb72b2d199a.png);
+    background-size: cover;
+    background-position:  center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+header {
+    margin: 70px;
+    padding: 5px;
+  
+    height: 90px;
+    
+  
+  
+   
+}
+header img {
+    width: 100%;
+    height: 300%;
+    text-align: center;
+    font-size: 2em;
+    line-height: 2.8125em;
+    object-fit: cover;
+    filter: brightness(0) invert(1);
+}
+
+
+nav {
+    margin: 200px;
+    padding: 5px;
+    height: 70px;
+    background-color: #f78733;
+    border-radius: 10px;
+}
+
+nav ul {
+    height: 100%;
+    border-radius: 10px;
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 30px;
+    height: 100%;
+    width: 180px;
+    
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    display:inline;
+   
+    text-decoration: none;
+    line-height: 2.5em;
+    
+   
+}
+
+nav ul li a:hover {
+   
+    background-color: #dfdce3;
+    color: #f78733;
+}
+main .SoccerResultsPL p{
+  padding: 20px;
+  position:absolute;
+  right: 25px;
+  top:5px;
+  color: white;
+  
+  
+}
+main .SoccerResultsPL-img img{
+  position:absolute;
+  right:10px;
+  top: 18px;
+  width: 30px;
+  border-radius: 50%;
+}
+main .logout a{
+  position:absolute;
+  left:10px;
+  top:5px;
+}
+
+.news-box{
+    width: 100%;
+}
+.news-box .news-content-box{
+    width: 85%;
+    margin: 20px auto;
+}
+.news-box .news-content-box .title{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    color: white;
+}
+.news-box .news-content-box .title h2{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.news-box .news-content-box .title p{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 20px;
+}
+.news-box .news-content-box .cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    margin: 25px auto;
+}
+.news-box .news-content-box .cards .card{
+    width: 100%;
+    background-color: white;
+    position: relative;
+}
+.news-box .news-content-box .cards .card img{
+    width: 100%;
+    height: auto;
+
+}
+.news-box .news-content-box .cards .card .text{
+  padding: 15px 20px;
+    
+}
+.news-box .news-content-box .cards .card .text h2{
+    font-size: 24px;
+      
+  }
+  .news-box .news-content-box .cards .card .text p{
+    font-size: 16px;
+    margin: 10px 0px;
+      
+  }
+  .news-box .news-content-box .cards .card a{
+      text-decoration: none;
+      display: inline-block;
+      background-color: #25c5c5;
+      padding: 8px 15px;
+      margin-left: 20px;
+      color: #fff;
+      margin-bottom: 20px;
+  }
+  .news-box .news-content-box .cards .card .date{
+  font-weight: 600;
+  position: absolute;
+  top:0;
+  left: 0;
+  display: inline-block;
+  background-color: #25c5c5;
+  padding: 6px 15px;
+
+  }
+
+  .footer-basic {
+    padding:40px 0;
+    background-color:#ffffff;
+    color:#4b4c4d;
+  }
+  
+  .footer-basic .list-inline {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+  .footer-basic .list-inline .list-inline-item {
+    padding:0 10px;
+  }
+  
+  .footer-basic .list-inline .list-inline-item a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic .list-inline .list-inline-item a:hover {
+    opacity:1;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }

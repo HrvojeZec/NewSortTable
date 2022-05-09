@@ -1,0 +1,5 @@
+abbr {
+  text-decoration: none !important;
+  border: none !important;
+  cursor: inherit !important;
+}
