@@ -1,7 +1,7 @@
 body{
     
     min-height: 100%;
-    background-image: url(../Home_page/images/20fce1c1-4fc1-407b-95d3-abb72b2d199a.png);
+    background-image: url(/public/images/20fce1c1-4fc1-407b-95d3-abb72b2d199a.png);
     background-size: cover;
     background-position:  center;
     background-repeat: no-repeat;
@@ -86,7 +86,7 @@ main .SoccerResultsPL-img img{
   width: 30px;
   border-radius: 50%;
 }
-main .logout a{
+main .logout form{
   position:absolute;
   left:10px;
   top:5px;

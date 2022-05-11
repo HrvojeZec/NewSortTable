@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Home page</title>
-    <link rel="stylesheet" href="home-style.css">
+    <link rel="stylesheet" href="/public/css/home-style.css">
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,13 +13,13 @@
 
 <body>
     <header>
-        <img src="../Home_page/images/32212-3-premier-league-transparent-image.png">
+        <img src="./public/images/32212-3-premier-league-transparent-image.png">
     </header>
 
     <nav>
         <ul>
-            <li><a href="../Home_page/home.html">Home</a></li>
-            <li><a href="../index.html">Standings</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="/">Standings</a></li>
             <li><a href="#">Live Now</a></li>
         </ul>
     </nav>
@@ -30,13 +30,15 @@
         </div>
         
         <div class="SoccerResultsPL-img">
-            <img src="../Home_page/images/pngtree-a-white--black-soccer-ball-vector-or-color-illustration-png-image_2013079.jpg" class="logo">
+            <img src="./public/images/pngtree-a-white--black-soccer-ball-vector-or-color-illustration-png-image_2013079.jpg" class="logo">
 
         </div>
 
         <div class="logout">
-        <a href="/login" class="btn btn-info btn-lg">
-            <span class="glyphicon glyphicon-log-out"></span> Log out </a>
+        <form action="/logout?_method=DELETE" method="POST">
+            <button type="submit" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-log-out"></span> Log out</button>
+        </form>
+
         </div>
 
 
@@ -49,7 +51,7 @@
                     
                     <div class="card">
                         <div class="image-box">
-                            <img src="../Home_page/images/Benitez.png">
+                            <img src="./public/images/Benitez.png">
                         </div>
                         <div class="text">
                             <h2>BENITEZ DEPARTS AS EVERTON MANAGER</h2>
@@ -67,7 +69,7 @@
 
                     <div class="card">
                         <div class="image-box">
-                            <img src="../Home_page/images/Bilic.png">
+                            <img src="./public/images/Bilic.png">
                         </div>
                         <div class="text">
                             <h2>Slaven Bilic puts name forward to replace Rafa Benitez at Everton</h2>
@@ -85,7 +87,7 @@
 
                     <div class="card">
                         <div class="image-box">
-                            <img src="../Home_page/images/Coutinho.png">
+                            <img src="./public/images/Coutinho.png">
                         </div>
                         <div class="text">
                             <h2>FPL Saturday review: Managers move early for Coutinho</h2>

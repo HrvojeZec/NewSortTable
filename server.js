@@ -12,6 +12,7 @@ const { has } = require('lodash');
 const passport = require('passport');
 const flash = require('express-flash');
 const session = require('express-session')
+const methodOverride = require('method-override')
 
 const initializePassport = require('./passport')
 initializePassport(passport,
@@ -24,6 +25,7 @@ const users = []
 app.set('view-engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static('./frontend'))
+app.use('/css', express.static(__dirname + './frontend/public'))
 app.use(flash())
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -31,37 +33,38 @@ app.use(session({
     saveUninitialized: false
 }))
 app.use(passport.initialize())
-app.use(passport.session())
-app.use('/css', express.static(__dirname + './frontend/public'))
+app.use(passport.authenticate('session'))
+app.use(methodOverride('_method'))
 
-
-app.get('/', (req, res) => {
-    res.render('/Home_page/home.html')
+app.get('/homePage', checkAutenticated, (req, res) => {
+    let img = `img src=/public/images/Benitez.png`;
+    res.render('./Home_page/home.ejs')
 })
 
 app.get('/clubs', (req, res) => {
 
     res.json(Globalclubs)
 })
-app.get('/login', (req, res) => {
+app.get('/login', checkNotAutenticated, (req, res) => {
     let img = `img src=/public/images/avatar.png`;
     res.render("./Login_page/index.ejs")
 
 
 })
-app.get('/register', (req, res) => {
+app.get('/register', checkNotAutenticated, (req, res) => {
     let img = `img src=/public/images/avatar.png`;
     res.render("./Register_page/register.ejs")
 
 
 })
-app.post('/login', passport.authenticate('local', {
-    successRedirect: '/',
+app.post('/login', checkNotAutenticated, passport.authenticate('local', {
+    successRedirect: '/homePage',
     failureRedirect: '/login',
     failureFlash: true
+
 }))
 
-app.post('/register', async (req, res) => {
+app.post('/register', checkNotAutenticated, async (req, res) => {
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
 
@@ -83,9 +86,22 @@ app.post('/register', async (req, res) => {
     console.log(users);
 })
 
-function checkAutenticated() {
-
+function checkAutenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/login')
 }
+function checkNotAutenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return res.redirect('/homePage');
+    }
+    next();
+}
+app.delete('/logout', (req, res) => {
+    req.logOut();
+    res.redirect('/login');
+})
 
 app.listen(3000, (err) => {
     if (err) {
